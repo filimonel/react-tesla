@@ -10,7 +10,6 @@ function App() {
       <Header />
       {/* Home */}
       <Home />
-      {/* Section */}
     </div>
   );
 }
