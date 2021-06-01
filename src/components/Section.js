@@ -8,6 +8,8 @@ const Section = ({
   rightBtnText,
 }) => {
   return (
+    // bgImage will become a prop available to the Wrapper stylling.
+    // It will contain the prop backgroundImg thas was passed down as a prop from Home component.
     <Wrap bgImage={backgroundImg}>
       <ItemText>
         <h1>{title}</h1>
@@ -16,7 +18,8 @@ const Section = ({
       <Buttons>
         <ButtonGroup>
           <LeftButton>{leftBtnText}</LeftButton>
-          <RightButton>{rightBtnText}</RightButton>
+          {/* right button only renders if it exist */}
+          {rightBtnText && <RightButton>{rightBtnText}</RightButton>}
         </ButtonGroup>
         <DownArrow src="/images/down-arrow.svg" />
       </Buttons>
